@@ -13,7 +13,7 @@ def main():
     if minsup not in minsup_threshold or minconf not in minconf_threshold:
         if minsup not in minsup_threshold:
             print("Invalid minimum support")
-            print("Valid values:\t{10, 50, 60, 70, 80}")
+            print("Valid values:\t{40, 50, 60, 70, 80}")
             print()
         if minconf not in minconf_threshold:
             print("Invalid minimum confidence")
@@ -272,13 +272,14 @@ def main():
 
     three_itemset_rules = pd.DataFrame(rules[3])
 
+    itemset_rules = pd.concat([two_itemset_rules, three_itemset_rules])
+
     rulesfn = f"rules_{minsup}_{minconf}.txt"
 
     rfdw = open(rulesfn, mode='w',encoding='utf8', newline="")
 
-    two_itemset_rules.to_csv(rulesfn, mode="a", index=False, header=False, sep="\"")
+    np.savetxt(rulesfn, itemset_rules, delimiter="::", fmt="%s")
 
-    three_itemset_rules.to_csv(rulesfn, mode="a", index=False, header=False, sep="\"")
     rfdw.close()
 
     return
