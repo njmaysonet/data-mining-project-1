@@ -1,5 +1,5 @@
-### Project 1 Apriori Algorithm ###
-# Members: David Acosta, Anthony Athens, Nestor Maysonet #
+# Project 1 Apriori Algorithm #
+### Members: David Acosta, Anthony Athens, Nestor Maysonet ###
 
 Use `myapriori.py` in `./apriori` to run the algorithm.
 
