@@ -7,7 +7,7 @@ def main():
     filename, minsup, minconf = sys.argv[1:]
     minsup, minconf = int(minsup), float(minconf)
 
-    minsup_threshold = {40, 50, 60, 70, 80}
+    minsup_threshold = {30, 40, 50, 60, 70, 80, 90}
     minconf_threshold = {0.5, 0.6, 0.7}
 
     if minsup not in minsup_threshold or minconf not in minconf_threshold:
@@ -141,6 +141,17 @@ def main():
 
     for k in itemsets:
         print(f"{k}-itemsets::{len(itemsets[k])}")
+
+    # Frequency file generator with specified minsup
+    freqfd = open(f"freq_{minsup}.txt", mode="w", encoding="utf8", newline="\n")
+
+    for i in range(1, 5):
+        for iset, ct in itemsets[i].items():
+            tup = ", ".join(list(map(str, list(iset))))
+            tup = "".join(["{", tup, "}"])
+            freqfd.write(f"{tup}::{ct}\n")
+
+    freqfd.close()
 
     # Rule generation for 2-itemsets with minsup a and minconf b
     rules = dict()
