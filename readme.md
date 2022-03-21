@@ -3,7 +3,7 @@
 
 Use `myapriori.py` in `./apriori` to run the algorithm.
 
-You need to set **minsup** and **minconf** such as `myapriori.py mydata.txt 100 0.5`
+You need to set **minsup** and **minconf** such as `python myapriori.py mydata.txt 100 0.5`
 along with a song data file separated with `::` delimiters.
 
 **Please put the data file in the `apriori` folder.**
@@ -14,4 +14,12 @@ in the Jupyter notebooks.
 **Do not** run the Apriori in the notebooks, they were used for exploration and
 generating visuals.
 
+Support Bar Plot:
+![](/supportbarchart.png)
+
+Rule Generation Bar Plots at different minconfs:
 ![](/rules5.png)
+
+![](/rules6.png)
+
+![](/rules7.png)
