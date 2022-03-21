@@ -1,5 +1,5 @@
-# Project 1 Apriori Algorithm #
-### Members: David Acosta, Anthony Athens, Nestor Maysonet ###
+# Project 1 Apriori Algorithm - Group 8
+### Members: David Acosta, Anthony Athens, Nestor Maysonet
 
 Use `myapriori.py` in `./apriori` to run the algorithm.
 
@@ -14,4 +14,4 @@ in the Jupyter notebooks.
 **Do not** run the Apriori in the notebooks, they were used for exploration and
 generating visuals.
 
-![](/apriori/rules5.png)
+![](/rules5.png)
