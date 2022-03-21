@@ -15,9 +15,11 @@ in the Jupyter notebooks.
 generating visuals.
 
 Support Bar Plot:
+
 ![](/supportbarchart.png)
 
 Rule Generation Bar Plots at different minconfs:
+
 ![](/rules5.png)
 
 ![](/rules6.png)
